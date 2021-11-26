@@ -36,13 +36,6 @@
       </b-tab-item>
 
       <b-tab-item label="Rekisteröidy">
-        <b-field label="Käyttäjänimi">
-          <b-input
-            placeholder="Piileskelijä"
-            v-model="username">
-          </b-input>
-        </b-field>
-
         <b-field label="Sähköposti">
           <b-input
             type="email"
@@ -84,7 +77,6 @@ export default {
   data () {
     return {
       activeTab: 0,
-      username: '',
       email: '',
       password: '',
       password2: '',
@@ -119,7 +111,6 @@ export default {
 
       this.axios
         .post(process.env.ROOT_API + '/user/register', {
-          username: this.username,
           email: this.email,
           password: this.password,
           password2: this.password2
