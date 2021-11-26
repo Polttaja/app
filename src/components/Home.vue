@@ -74,6 +74,7 @@ export default {
       }).then((response) => {
         this.isLoading = false
         if (!response.data.success) {
+          this.alerts.length = 0
           this.alerts.push({ message: response.data.message })
         }
 
