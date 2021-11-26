@@ -98,7 +98,7 @@ export default {
       this.isLoading = true
 
       this.axios
-        .post(`http://localhost:3000/user/login`, {
+        .post(process.env.ROOT_API + '/user/login', {
           email: this.email,
           password: this.password
         })
@@ -118,7 +118,7 @@ export default {
       this.isLoading = true
 
       this.axios
-        .post(`http://localhost:3000/user/register`, {
+        .post(process.env.ROOT_API + '/user/register', {
           username: this.username,
           email: this.email,
           password: this.password,

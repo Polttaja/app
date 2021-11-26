@@ -51,7 +51,7 @@ export default {
       this.$router.push('/')
     },
     list() {
-      this.axios.post('http://localhost:3000/alias/list', {
+      this.axios.post(process.env.ROOT_API + '/alias/list', {
         token: this.token
       }).then((response) => {
         this.isLoading = false
@@ -68,7 +68,7 @@ export default {
     },
     newAlias() {
       this.isLoading = true
-      this.axios.post('http://localhost:3000/alias/new', {
+      this.axios.post(process.env.ROOT_API + '/alias/new', {
         token: this.token,
         random: true
       }).then((response) => {
