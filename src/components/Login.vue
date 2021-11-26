@@ -81,7 +81,7 @@
 <script>
 export default {
   name: 'Login',
-  data() {
+  data () {
     return {
       activeTab: 0,
       username: '',
@@ -94,7 +94,7 @@ export default {
     }
   },
   methods: {
-    login() {
+    login () {
       this.isLoading = true
 
       this.axios
@@ -113,8 +113,8 @@ export default {
           console.log(response.data)
         })
     },
-    
-    register() {
+
+    register () {
       this.isLoading = true
 
       this.axios
@@ -134,7 +134,7 @@ export default {
         })
     }
   },
-  mounted() {
+  mounted () {
     if (localStorage.token) {
       this.token = localStorage.token
       this.$router.push('Home')

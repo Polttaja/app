@@ -23,7 +23,7 @@
 <script>
 export default {
   name: 'Home',
-  data() {
+  data () {
     return {
       isLoading: true,
       alerts: [],
@@ -46,11 +46,11 @@ export default {
     }
   },
   methods: {
-    logOut() {
+    logOut () {
       localStorage.removeItem('token')
       this.$router.push('/')
     },
-    list() {
+    list () {
       this.axios.post(process.env.ROOT_API + '/alias/list', {
         token: this.token
       }).then((response) => {
@@ -66,7 +66,7 @@ export default {
         })
       })
     },
-    newAlias() {
+    newAlias () {
       this.isLoading = true
       this.axios.post(process.env.ROOT_API + '/alias/new', {
         token: this.token,
@@ -81,7 +81,7 @@ export default {
       })
     }
   },
-  mounted() {
+  mounted () {
     if (localStorage.token) {
       this.token = localStorage.token
       this.list()
