@@ -13,3 +13,4 @@ jobs:
         username: 'Polttaja'
         reponame: 'app'
         token: ${{ secrets.GITHUB_TOKEN }} # Leave this line unchanged
+        cname: app.polttaja.fi
