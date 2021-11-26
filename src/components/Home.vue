@@ -61,6 +61,7 @@ export default {
         }
 
         this.aliases = response.data.aliases.map((alias) => {
+          alias.alias = alias.alias + '@polttaja.fi'
           alias.created = new Date(alias.created * 1000).toLocaleDateString('fi-FI')
           return alias
         })
